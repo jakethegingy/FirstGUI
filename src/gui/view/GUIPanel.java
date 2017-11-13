@@ -20,6 +20,7 @@ public class GUIPanel extends JPanel
 		baseLayout = new SpringLayout();
 		
 		setupPanel();
+		setupLayout();
 	}
 	
 	/**
@@ -28,6 +29,7 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupPanel()
 	{
+		this.setBackground(Color.CYAN);
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 	}
@@ -36,7 +38,8 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.NORTH, firstButton, 129, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 149, SpringLayout.WEST, this);
 	}
 	/**
 	 * This helper method is used to link any GUI components to the associated listening
