@@ -60,9 +60,18 @@ public class GUIPanel extends JPanel
 	}
 	private void changeBackgroundColor()
 	{
+		Color background;
+		int green = (int)(Math.random() * 1);
+		int blue = (int)(Math.random() * 1);
 		int red = (int)(Math.random() * 256);
-		int green = (int)(Math.random() * 256);
-		int blue = (int)(Math.random() * 256);
+		if(this.getBackground().getRed() < 250) 
+		{
+			int greeen = (int)(Math.random() * 1);
+			int bluee = (int)(Math.random() * 256);
+			int reed = (int)(Math.random() * 1);
+			this.setBackground(new Color(reed, greeen, bluee));
+		}
+		
 		
 		this.setBackground(new Color(red, green, blue));
 	}
